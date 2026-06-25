@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Arrays Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <header>JS Arrays Guide</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Creating_Arrays">Creating Arrays</a>
+    <a class="nav-link" href="#Array_Methods">Array Methods</a>
+    <a class="nav-link" href="#Iterating_Elements">Iterating Elements</a>
+    <a class="nav-link" href="#Multidimensional_Arrays">Multidimensional Arrays</a>
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>JavaScript arrays are used to store multiple values in a single variable. They are zero-indexed, meaning the first element is at index 0.</p>
+      <p>Arrays are highly versatile data structures that can resize dynamically and hold multiple data types concurrently.</p>
+      <code>let data = [];</code>
+    </section>
+
+    <section class="main-section" id="Creating_Arrays">
+      <header>Creating Arrays</header>
+      <p>There are multiple ways to instantiate an array initialization structure inside your applications.</p>
+      <p>The most common approach is using array literals, which is straightforward and highly optimized:</p>
+      <code>const fruits = ["Apple", "Banana"];</code>
+      <p>Alternatively, you can initialize an instance via the built-in constructor utility:</p>
+      <code>const prices = new Array(10, 20, 30);</code>
+    </section>
+
+    <section class="main-section" id="Array_Methods">
+      <header>Array Methods</header>
+      <p>JavaScript provides a wide range of native mutations to interact safely with arrays without manually altering values.</p>
+      <p>Some crucial operations include shifting or appending boundaries:</p>
+      <ul>
+        <li><code>push()</code> - Adds an item to the end of the array.</li>
+        <li><code>pop()</code> - Removes the last element.</li>
+        <li><code>shift()</code> - Removes the first element.</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Iterating_Elements">
+      <header>Iterating Elements</header>
+      <p>To process items individually, developers often use loops or dedicated iteration methods.</p>
+      <p>The modern structural loop paradigm handles synchronous items smoothly:</p>
+      <code>fruits.forEach(item => console.log(item));</code>
+      <p>Using functional paradigms makes it easy to transform data securely without side effects across your script contexts.</p>
+    </section>
+
+    <section class="main-section" id="Multidimensional_Arrays">
+      <header>Multidimensional Arrays</header>
+      <p>JavaScript does not support direct multidimensional arrays natively, but it allows arrays of arrays.</p>
+      <p>This layout is extremely useful for grids, matrices, or spreadsheet configurations:</p>
+      <ul>
+        <li>Row tracking indexes</li>
+        <li>Column tracking structures</li>
+      </ul>
+      <p>Accessing these requires daisy-chaining square bracket selectors seamlessly.</p>
+    </section>
+
+  </main>
+
+</body>
+</html>

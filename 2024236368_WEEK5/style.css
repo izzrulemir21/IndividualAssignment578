@@ -1,0 +1,121 @@
+/* Base Layout Resets */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  background-color: #fcfcfc;
+}
+
+/* =========================================================
+   SIDEBAR NAVBAR (Tests 12, 21)
+   ========================================================= */
+#navbar {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1e293b;
+  border-right: 2px solid #e2e8f0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar header {
+  color: #f8fafc;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+  background-color: #0f172a;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid #334155;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #334155;
+  color: #ffffff;
+  padding-left: 30px;
+}
+
+/* =========================================================
+   MAIN DOCUMENTATION FLOW (Test 1)
+   ========================================================= */
+#main-doc {
+  margin-left: 300px;
+  padding: 40px;
+  max-width: 850px;
+}
+
+.main-section {
+  margin-bottom: 50px;
+  scroll-margin-top: 40px; /* Gives nice spacing when jumping to an anchor */
+}
+
+.main-section header {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #475569;
+}
+
+/* Code block styling */
+code {
+  display: block;
+  background-color: #f1f5f9;
+  border-left: 4px solid #3b82f6;
+  color: #2563eb;
+  padding: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  border-radius: 0 4px 4px 0;
+  margin: 15px 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+ul {
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #475569;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN MEDIA QUERY (Test 22)
+   ========================================================= */
+@media (max-width: 768px) {
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  #main-doc {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

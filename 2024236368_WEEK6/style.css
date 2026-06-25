@@ -1,0 +1,276 @@
+/* Core Structural Styles & Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+  line-height: 1.6;
+  padding-top: 80px; /* Accounts for fixed header spacing */
+}
+
+/* =========================================================
+   HEADER & NAVIGATION BAR (Tests 23, 25 - CSS Flexbox Usage)
+   ========================================================= */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  
+  /* Flexbox Requirement */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#header-img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #0f172a;
+}
+
+#nav-bar {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+/* =========================================================
+   MAIN SECTIONS CONTENT
+   ========================================================= */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Hero Newsletter Section */
+#hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+#hero h2 {
+  font-size: 36px;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+#hero p {
+  color: #475569;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#email {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#email:focus {
+  border-color: #2563eb;
+}
+
+#submit {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#submit:hover {
+  background-color: #1d4ed8;
+}
+
+/* Features Grid Block */
+#features {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  flex: 1;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+/* Video Showcase Wrapper */
+.video-wrapper {
+  max-width: 720px;
+  margin: 30px auto 0 auto;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Pricing Layout Block */
+#pricing h2 {
+  margin-bottom: 30px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.price-box {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 280px;
+}
+
+.price-box.active {
+  border-color: #2563eb;
+  position: relative;
+  transform: scale(1.03);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+}
+
+.cost {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 15px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2563eb;
+  background-color: transparent;
+  color: #2563eb;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.price-box.active .btn, .btn:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================================================
+   MEDIA QUERY FOR SMALL SCREEN CONFIGURATIONS (Test 24)
+   ========================================================= */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  body {
+    padding-top: 120px;
+  }
+
+  #nav-bar {
+    gap: 20px;
+  }
+
+  #features, .price-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-box {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .price-box.active {
+    transform: none;
+  }
+}

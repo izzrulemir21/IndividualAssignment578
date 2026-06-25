@@ -1,0 +1,159 @@
+/* Core Layout Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.7;
+  color: #2c3e50;
+  background-color: #f7f9fa;
+  padding: 40px 20px;
+}
+
+/* =========================================================
+   MAIN WRAPPER LAYOUT
+   ========================================================= */
+#main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+#title {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-style: italic;
+  text-align: center;
+  color: #64748b;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+/* =========================================================
+   IMAGE & CAPTION LAYOUT (Tests 16, 17, 18, 19)
+   ========================================================= */
+#img-div {
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+#image {
+  /* Test 16 & 17 & 18 Requirements */
+  display: block;
+  max-width: 100%;
+  height: auto;
+  
+  /* Test 19 Requirement: Center within parent */
+  margin: 0 auto;
+  
+  border-radius: 4px;
+}
+
+#img-caption {
+  font-size: 14px;
+  color: #475569;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* =========================================================
+   TRIBUTE TIMELINE INFO & CONTENT BLOCK
+   ========================================================= */
+#tribute-info {
+  margin-bottom: 40px;
+}
+
+#tribute-info h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 22px;
+  color: #1e293b;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  margin-bottom: 18px;
+  padding-left: 20px;
+}
+
+/* Stylish dot markers for the timeline items */
+li::before {
+  content: "•";
+  color: #7c3aed;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+li strong {
+  color: #0f172a;
+}
+
+blockquote {
+  margin: 35px 0;
+  padding: 15px 20px;
+  background-color: #f8e7f7;
+  border-left: 4px solid #7c3aed;
+  border-radius: 0 8px 8px 0;
+}
+
+blockquote p {
+  font-size: 18px;
+  font-style: italic;
+  color: #581c87;
+  margin-bottom: 5px;
+}
+
+blockquote cite {
+  font-size: 14px;
+  color: #701a75;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TRIBUTE LINK SECTION
+   ========================================================= */
+.link-container {
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 25px;
+  font-size: 16px;
+}
+
+#tribute-link {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+#tribute-link:hover {
+  border-color: #7c3aed;
+}
